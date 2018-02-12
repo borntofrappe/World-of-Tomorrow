@@ -1,8 +1,6 @@
 # World-of-Tomorrow
 
-Build a simple website in which visitors can waste a couple of minutes jotting down their thoughts. 
-
-Ongoing project @ this [location](https://codepen.io/borntofrappe/full/xYdoro/)
+Build a [simple website](https://codepen.io/borntofrappe/full/xYdoro/) in which visitors can waste a couple of minutes jotting down their thoughts. 
 
 Using:
 - [Font Awesome Icons](https://fontawesome.com/v4.7.0/); 
