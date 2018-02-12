@@ -2,6 +2,8 @@
 
 Build a simple website in which visitors can waste a couple of minutes jotting down their thoughts. 
 
+Ongoing project @ this [location](https://codepen.io/borntofrappe/full/xYdoro/)
+
 Using:
 - [Font Awesome Icons](https://fontawesome.com/v4.7.0/); 
 - [jQuery](https://jquery.com/).
