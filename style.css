@@ -307,7 +307,6 @@ for smaller screen sizes
   }
   .today .right-column {
     margin-top: 3rem;
-    margin-right: 3rem;
   }
 
   .tomorrow {
@@ -320,7 +319,6 @@ for smaller screen sizes
   */
   .tomorrow .left-column {
     margin-top: 3rem;
-    margin-left: 3rem;
     order: 2;
   }
 
