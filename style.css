@@ -29,11 +29,13 @@ container for the entire page
 navigation bar
   - display flex to make it a flex container (as to arrange items in a row)
   - space around to place the list items more in the center of the viewport
+  - z-index to position the fixed navbar atop everything else
 */
 .navigation-bar {
   display: flex;
   justify-content: space-around;
 
+  z-index: 2;
   width: 100%;
   font-size: 1.35rem;
   color: rgba(0,0,0,0.7);
@@ -41,8 +43,7 @@ navigation bar
   padding: 1rem;
   border-bottom: 2px solid rgba(0,0,0,0.2);
   position: fixed;
-  background-color: #fff;
-  z-index: 2;
+  background-color: #fff;  
 }
 .navigation-bar li {
   text-transform: capitalize;
@@ -86,8 +87,8 @@ for smaller screen sizes
   }
 
   /*
-  for the three sections of the page, change the css grid structure
-  from two columns side by side to two rows one after the other
+  for the three sections of the page, change the css structure
+  from content displayed side by side to content laid out vertically
   */
   .welcome {
     display: flex;
@@ -107,6 +108,10 @@ for smaller screen sizes
     display: flex;
     flex-direction: column;
   }
+  /*
+   for the content shown on the left of tomorrow's section
+    - order 2 to display it after the previous right column 
+  */
   .tomorrow .left-column {
     margin-top: 3rem;
     margin-left: 3rem;
@@ -119,11 +124,15 @@ for smaller screen sizes
   min-height: 100vh;
   font-family: 'Lato', sans-serif;
 }
+/*
+for the welcome section 
+  - display flex to make it a flex container 
+  - align items to center the items in the cross axis (column)
+*/
 .welcome {
-  padding: 5rem;
   display: flex;
   align-items: center;
-
+  padding: 5rem;
 }
 .welcome i {
   font-size: 300px;
@@ -131,59 +140,49 @@ for smaller screen sizes
 .welcome .left-column {
   flex-grow: 1;
 }
-.welcome .right-column {
-}
 
+/*
+for the today section 
+  - display flex to make it a flex container 
+  - justify-content to center the items in the main axis (row)
+  - align items to center the items in the cross axis (column)
+*/
 .today {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   padding: 3rem;
 }
+/*
+for the right column shown in today's section 
+  - flex grow to grow and occupy available space
+*/
 .today .right-column {
   flex-grow: 1;
   margin-left: 3rem;
 }
 
+/*
+for the tomorrw section 
+  - display flex to make it a flex container 
+  - justify-content to center the items in the main axis (row)
+  - align items to center the items in the cross axis (column)
+*/
 .tomorrow {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 3rem;
 }
+/*
+for the left column shown in today's section 
+  - flex grow to grow and occupy available space
+*/
 .tomorrow .left-column {
   flex-grow: 1;
   margin-right: 3rem;
 }
-.input-form {
-  display: flex;
-  align-items: center;
-}
-.input-form i {
-  padding: 1rem;
-  font-size: 1.4rem;
-  cursor: pointer;
-}
-.input-form input {
-  width: 100%;
-  outline: none;
-  border: none;
-  border-bottom: 1px solid rgba(0,0,0,0.2);
-  padding-bottom: 0.4rem;
-  font-family: 'Lato', sans-serif;
-  font-size: 1.3rem;
-}
-.input-form input::placeholder {
-  font-size: 1.2rem;
-  color: rgba(0,0,0,0.5);
-}
 
-.thoughts {
-  list-style: none;
-  position: relative;
-  font-size: 1.2rem;
-  margin: 0.4rem 0;
-}
 
 /*
 for both calndar page divs
@@ -243,6 +242,38 @@ for the calendar icons div (flexbox item)
 }
 
 
+/*
+for the div including the input and the icon 
+  - display flex to make it a flex container
+  - align items to center in the cross axis (column)
+*/
+.input-form {
+  display: flex;
+  align-items: center;
+}
+/*
+for the input in the div including the input and the icon 
+  - flex-grow to 1 to occupy available space
+*/
+.input-form input {
+  flex-grow: 1;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  padding-bottom: 0.4rem;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.3rem;
+}
+.input-form input::placeholder {
+  font-size: 1.2rem;
+  color: rgba(0,0,0,0.5);
+}
+
+.input-form i {
+  padding: 1rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
 
 /*
 for the footer
@@ -268,6 +299,13 @@ for the footer
 }
 
 
+/*
+for the underline from center transition
+  - position relative to the element, as to benefit from absolute positioning of the following pseudo-elemen
+
+  - position pseudo element below the element itself, right at the center
+  - transition the pseudo element when hovering on the element, changing width and left attributes
+*/
 
 .underline-from-center {
   position: relative;
