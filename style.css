@@ -65,61 +65,6 @@ list item used as a filler element
   color: rgba(0,0,0,0.82);
 }
 
-/*
-for smaller screen sizes
-*/
-@media only screen and (max-width: 760px) {
-
-  .navigation-bar li:first-child {
-    margin-right: 1.5rem;
-    font-size: 1.5rem;
-  }
-  /*
-  for the navigation bar
-    - hide all list items except the first for the title
-      which is then shown in the middle as per justify-content set to space-around
-  */
-  .navigation-bar li:nth-child(2),
-  .navigation-bar li:nth-child(3),
-  .navigation-bar li:nth-child(4),
-  .navigation-bar li:nth-child(5) {
-    display: none;
-  }
-
-  /*
-  for the three sections of the page, change the css structure
-  from content displayed side by side to content laid out vertically
-  */
-  .welcome {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-  .today {
-    display: flex;
-    flex-direction: column;
-  }
-  .today .right-column {
-    margin-top: 3rem;
-    margin-right: 3rem;
-  }
-
-  .tomorrow {
-    display: flex;
-    flex-direction: column;
-  }
-  /*
-   for the content shown on the left of tomorrow's section
-    - order 2 to display it after the previous right column 
-  */
-  .tomorrow .left-column {
-    margin-top: 3rem;
-    margin-left: 3rem;
-    order: 2;
-  }
-
-}
-
 .section {
   min-height: 100vh;
   font-family: 'Lato', sans-serif;
@@ -323,4 +268,60 @@ for the underline from center transition
 .underline-from-center:hover:after {
   width: 100%;
   left: 0px;
+}
+
+
+/*
+for smaller screen sizes
+*/
+@media only screen and (max-width: 760px) {
+
+  .navigation-bar li:first-child {
+    margin-right: 1.5rem;
+    font-size: 1.5rem;
+  }
+  /*
+  for the navigation bar
+    - hide all list items except the first for the title
+      which is then shown in the middle as per justify-content set to space-around
+  */
+  .navigation-bar li:nth-child(2),
+  .navigation-bar li:nth-child(3),
+  .navigation-bar li:nth-child(4),
+  .navigation-bar li:nth-child(5) {
+    display: none;
+  }
+
+  /*
+  for the three sections of the page, change the css structure
+  from content displayed side by side to content laid out vertically
+  */
+  .welcome {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .today {
+    display: flex;
+    flex-direction: column;
+  }
+  .today .right-column {
+    margin-top: 3rem;
+    margin-right: 3rem;
+  }
+
+  .tomorrow {
+    display: flex;
+    flex-direction: column;
+  }
+  /*
+   for the content shown on the left of tomorrow's section
+    - order 2 to display it after the previous right column 
+  */
+  .tomorrow .left-column {
+    margin-top: 3rem;
+    margin-left: 3rem;
+    order: 2;
+  }
+
 }
