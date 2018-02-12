@@ -62,9 +62,14 @@
       </ul>
 
       
-      
+      <!-- div encompassing the corpus of the page -->
 
       <div class="main">
+        <!--
+        first section, greeting the visitor
+          - left column, with headers 
+          - right column, with temporary extra large icon (to be substituted by SVG image)
+        -->
         <div class="section welcome">
           <div class="left-column">
             <h1>Welcome</h1>
@@ -74,11 +79,22 @@
           <div class="right-column">
             <i class="fa fa-globe" aria-hidden="true"></i>
           </div>
-
         </div><!-- close div describing the first section -->
 
+        
+        <!--
+        second section, for today's date and today's thoughts
+          - left column, calendar page for today 
+          - right column, with input type text to catalog one's wonderings
+        -->
         <div class="section today">
           <div class="left-column">
+            
+            <!-- for the calendar structure (replicated for the following section)
+              - div encompassing entire display
+              - div considering all icons together
+              - div with the digit representing the number (to be modified in JS)
+            -->
             <div class="calendar-page calendar-page-today">
               <div class="calendar-icons">
                 <i class="fa fa-battery-full" aria-hidden="true"></i>
@@ -90,6 +106,11 @@
           </div>
 
           <div class="right-column">
+            <!-- for input structure (replicated for the following section)
+              - header introducing to the input type text
+              - div considering input and click-able icon
+              - unordered list for the list items to be appended as the input receives text
+            -->
             <h2>Is something on your mind <span class="today-tomorrow">today</span>?</h2>
             <div class="input-form">
               <input type="text" placeholder="Do tell me">
@@ -101,7 +122,12 @@
           </div>
 
         </div><!-- close div for the second section -->
-
+        
+        <!--
+        third section, for tomorrow's date and tomorrow's thoughts
+          - left column, with input type text to catalog one's wonderings, for tomorrow
+          - right column, calendar page for today 
+        -->
         <div class="section tomorrow">
           <div class="left-column">
             <h2>Planning something nice for <span class="today-tomorrow">tomorrow</span>?</h2>
@@ -143,7 +169,7 @@
         </li>
       </ul>
 
-  </div>
+  </div><!-- close div for all the content of the page -->
   
   <!-- Reference to jQuery's own CDN -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
