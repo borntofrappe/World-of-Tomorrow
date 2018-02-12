@@ -7,10 +7,10 @@
 
   <!-- Custom Styling -->
   <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- Reference to font awesome icons' CDN -->
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-  <!-- Page Tab Icon, go back in the folder structure with two dots ../-->
   <link rel="icon" href="Resources/tab_icon.png">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,22 +22,20 @@
   body with the following HTML structure
     - div for the entire page
       - unordered list for the navigation-bar, set atop the page
+      - div containing the corpus of the page
+      - unordered list for the footer, below the page
+  -->
+  
+  <div class="container">
+    
+    <!--
+    - unordered list for the navigation-bar, set atop the page
         with one list item for each section of the page (title/brand section as well as a welcome, today and tomorrow section)
         an additional list item is set between the title and the remaining three labels, as to occupy the available space and move the title to the left, while the remaining three are pushed to the right
         ! three of the list items, the ones redirecting to a section of the page, they are imbued with a class to include an an underline from the bottom center upon hover
-
-      - div containing the corpus of the page, laid out with css grid
-        - section for welcome, containing a welcome message
-        - section for today, showing the calendar for today's date, and a text input accepting anything on the visitor mind for today
-        - section for tomorrow, with the calendar page for tomorrow, and a text input accepting anything on the visitor mind for tomorrow
-
-
-      - unordered list for the footer, below the page
-        with a simple message slightly explaining the purpose of the page +
-        redirecting the visitor to go do something somewhere else
-  -->
-  <div class="container">
-      <ul class="navigation-bar">
+    -->
+      
+    <ul class="navigation-bar">
         <li>
           <a href="#">
             <i class="fa fa-globe"></i>
@@ -63,7 +61,8 @@
 
       </ul>
 
-
+      
+      
 
       <div class="main">
         <div class="section welcome">
@@ -76,7 +75,7 @@
             <i class="fa fa-globe" aria-hidden="true"></i>
           </div>
 
-        </div>
+        </div><!-- close div describing the first section -->
 
         <div class="section today">
           <div class="left-column">
@@ -86,7 +85,7 @@
                 <i class="fa fa-envelope" aria-hidden="true"></i>
                 <i class="fa fa-wifi" aria-hidden="true"></i>
               </div>
-              <h2 class="day-of-the-month" id="today">--</h2>
+              <h2 class="day-of-the-month" id="today">11</h2>
             </div>
           </div>
 
@@ -101,7 +100,7 @@
 
           </div>
 
-        </div>
+        </div><!-- close div for the second section -->
 
         <div class="section tomorrow">
           <div class="left-column">
@@ -121,15 +120,20 @@
                 <i class="fa fa-envelope" aria-hidden="true"></i>
                 <i class="fa fa-wifi" aria-hidden="true"></i>
               </div>
-              <h2 class="day-of-the-month" id="tomorrow">--</h2>
+              <h2 class="day-of-the-month" id="tomorrow">12</h2>
             </div>
           </div>
 
-        </div>
+        </div><!-- close div for the third sections -->
 
+      </div><!-- close main div encompassing the three sections -->
 
-      </div>
-
+      
+    <!-- 
+    - unordered list for the footer, below the page
+        with a simple message slightly explaining the purpose of the page +
+        redirecting the visitor to go do something somewhere else
+    -->
       <ul class="footer">
         <li>Congratulations! You have reached the end of the page.
           <br>Time to work on your
@@ -140,8 +144,10 @@
       </ul>
 
   </div>
-
+  
+  <!-- Reference to jQuery's own CDN -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <!-- Reference to custom script -->
   <script src="script.js"></script>
 
 </body>
