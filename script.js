@@ -66,3 +66,55 @@ var dayOfTheMonthTomorrow = tomorrow.getUTCDate();
 
 document.querySelector("#today").textContent= dayOfTheMonth;
 document.querySelector("#tomorrow").textContent= dayOfTheMonthTomorrow;
+
+
+/*
+FOR THE SMOOTH SCROLL EFFECT WHEN CLICKING ON THE NAVBAR ITEMS
+
+1. first it is necessary to listen for a click event on the list items in the navigation bar 
+
+const welcomeLink = document.querySelector(".welcome-link");
+welcomeLink.addEventListener("click", function(e) {
+
+});
+
+2. then it is possible to make use of the method scrollIntoView, with a behavior of smooth. 
+In order to allow for the actual scroll it is also necessary to prevent the default behavior of the click event 
+(preventing default behavior may cause some issues, read up on [this](https://css-tricks.com/snippets/jquery/smooth-scrolling/))
+
+welcomeLink.addEventListener("click", function(e) {
+  e.preventDefault();
+  document.querySelector('.welcome').scrollIntoView({
+    behavior: 'smooth'
+  });
+});
+
+*/
+
+// consider the three items in the navigation bar
+const welcomeLink = document.querySelector(".welcome-link");
+const todayLink = document.querySelector(".today-link");
+const tomorrowLink = document.querySelector(".tomorrow-link");
+
+
+// to each add an event listener enabling for the smooth scroll to each respective section
+welcomeLink.addEventListener("click", function(e) {
+  e.preventDefault();
+  document.querySelector('.welcome').scrollIntoView({
+    behavior: 'smooth'
+  });
+});
+
+todayLink.addEventListener("click", function(e) {
+  e.preventDefault();
+  document.querySelector('.today').scrollIntoView({
+    behavior: 'smooth'
+  });
+});
+
+tomorrowLink.addEventListener("click", function(e) {
+  e.preventDefault();
+  document.querySelector('.tomorrow').scrollIntoView({
+    behavior: 'smooth'
+  });
+});
