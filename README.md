@@ -3,8 +3,7 @@
 Build a [simple website](https://codepen.io/borntofrappe/full/xYdoro/) in which visitors can waste a couple of minutes jotting down their thoughts. 
 
 Using:
-- [Font Awesome Icons](https://fontawesome.com/v4.7.0/); 
-- [jQuery](https://jquery.com/).
+- [Font Awesome Icons](https://fontawesome.com/v4.7.0/).
 
 ### Page Dynamics
 
